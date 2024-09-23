@@ -18,14 +18,19 @@ default = []
 serde = ["dep:serde", "egui/serde"]
 
 [dependencies]
-egui = { version = "0.28", default-features = false }
+# egui = { version = "0.28", default-features = false }
+egui = { git = "https://github.com/mitbailey/egui", branch = "gencam", default-features = false }
 serde = { version = "1", optional = true, features = ["derive"] }
 
 duplicate = "1.0"
 paste = "1.0"
 
 [dev-dependencies]
-eframe = { version = "0.28", default-features = false, features = [
+eframe = { git = "https://github.com/mitbailey/egui", branch = "gencam", default-features = false, features = [
     "default_fonts",
     "glow",
 ] }
+# eframe = { version = "0.28", default-features = false, features = [
+#     "default_fonts",
+#     "glow",
+# ] }
